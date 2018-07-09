@@ -24,8 +24,10 @@ const client = new vision.ImageAnnotatorClient();
 // Performs text detection on the gcs file
 app.get('/receipt', (req, res) => {
   // get house info from database
+  const fileName = '/Users/jo-eunbyeol/workspace/MVP/server/tj3.jpg';
   client
-  .textDetection(`gs://test1234ab/tj3.jpg`)
+ // .textDetection(`gs://test1234ab/tj3.jpg`)
+  .textDetection(fileName)
   .then(results => {
     let detections = results[0].textAnnotations;
     // detections.forEach(text =>  console.log('here!!!',text.description, JSON.stringify(text)));

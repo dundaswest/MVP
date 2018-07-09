@@ -67,7 +67,7 @@ class App extends React.Component {
             <div key={`${index}0`} className="tx">
               {entry[0]}
             </div>
-            <div key={`${index}1`} className="tx">
+            <div key={`${index}1`} className="tx price" >
               {parseFloat(entry[1])}
             </div>
             <div key={`${index}2`} className="tx">

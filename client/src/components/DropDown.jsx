@@ -8,7 +8,7 @@ class DropDown extends React.Component {
     return (
       <select className="dropDown" onChange={()=>this.props.handleCheckout(this.props.info)}>
         {this.props.people.map((e,i) =>
-           <option key={i}value={e}>{e}</option>
+           <option className = "options" key={i} value={e}>{e}</option>
         )}
       </select>
     )
