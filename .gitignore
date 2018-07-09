@@ -1,0 +1,11 @@
+## Mac OS
+.DS_store
+
+##npm packages
+node_modules/
+
+##webpack default output folder
+public/
+
+
+mvp project-599dbe97db5d.json
