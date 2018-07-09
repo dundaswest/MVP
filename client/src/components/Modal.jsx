@@ -13,10 +13,12 @@ class Modal extends React.Component {
     };
     return (
       <div id="myModal" className="modal" style={style} >
-        <div id="selectedName">{this.props.selectedName}</div>
+
           <div className="modalContent">
+
           <div className = "modalHeader">
-          <div className="txn-header txn-row">
+          <div id="selectedName">{`${this.props.selectedName}'s Total`}</div>
+          <div className="txn-header txn-row modal-row">
           <div className="txn-data">Items</div>
           <div className="txn-data">Price</div>
         </div>
@@ -24,7 +26,7 @@ class Modal extends React.Component {
             <div className="modalItemDiv">
               <div className="modalItem">{e[0]}</div>
               <div className="modalItem">{e[1]}</div>
-              <div class="clear"></div>
+              <div className="clear"></div>
             </div>
           )}
         </div>

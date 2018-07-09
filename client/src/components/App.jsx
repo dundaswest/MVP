@@ -3,11 +3,13 @@ import axios from 'axios';
 import DropDown from './DropDown';
 import Input from './Input.jsx';
 import Modal from './Modal';
+import Basic from './Drop.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      fileName:'',
       table:[],
       items:[],
       price:[],
@@ -22,7 +24,11 @@ class App extends React.Component {
   componentDidMount() {
     this.getReceipt();
   }
-
+  handleFileSubmit() {
+    let fileName1 = document.getElementById('fileName');
+    console.log(fileName1)
+    //this.setState({fileName})
+  }
   handleNameSubmit(e,name) {
     e.preventDefault();
     this.setState({people:this.state.people.concat(name)});
@@ -32,7 +38,6 @@ class App extends React.Component {
   }
   handleDoneClick(){
     this.setState({show:!this.state.show});
-   // if(this.state.selectedName !== )
   }
   handleCheckout(entry) {
     console.log(entry);
@@ -80,6 +85,7 @@ class App extends React.Component {
 
       <button onClick={this.handleDoneClick.bind(this)} id="done">done!</button>
       <Modal show={this.state.show} selectedName={this.state.selectedName}info={this.state.checkout}/>
+      <Basic handleFileSubmit={this.handleFileSubmit.bind(this)}/>
       </div>
     )
   }
